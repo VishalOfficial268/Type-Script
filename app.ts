@@ -1,4 +1,4 @@
-export {}
+// export {}
 
 /** Type declrations: with Premitive Data Types */
 let numbers1:number = 1312312;
@@ -18,6 +18,36 @@ let checkNanValue:number = NaN;
 
 /** Type declrations: with Non-Premitive Data Types */
 
+//working with Array:
 let stringArr:string[] = ["Vishal", "Aaditya", "Krishna", "Sunil"];
 let numbersArr:number[] = [1,2,3,4,5,6];
 const booleanArr:boolean[] = [true, false];
+let anyTypeofArr: any[] = [12,5, "sdfsfd", true, 2.2];
+
+//working with Object:
+
+let users1 = {name: "Bruce Wayne", role: "Batman", isDCProduction: true};
+console.warn(users1);
+
+
+/** Using interface: */
+//interface is like kind of schema type:
+interface userType {
+    name: string,
+    age: number,
+    address: any
+}
+
+let users2:userType = {
+    name:"Vishal",
+    age: 27,
+    address: "marlo Park Avenue"
+}
+
+
+/** Using any keyward */
+
+let anotherUser:any = {
+    isAdmin: true,
+    role:"software engineer"
+}
