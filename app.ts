@@ -40,7 +40,7 @@ stringArr.push("New Elements");
 
 //working with Object:
 let users1 = { name: "Bruce Wayne", role: "Batman", isDCProduction: true };
-console.warn(users1);
+// console.warn(users1);
 
 /** NOTE -
  * In initially it was string and boolean so can't assign another type.
@@ -57,6 +57,7 @@ interface userType {
     address: any
 }
 
+
 let users2: userType = {
     name: "Vishal",
     age: 27,
@@ -64,14 +65,182 @@ let users2: userType = {
 }
 
 
-/** Using any keyward */
+interface usersMethod {
+    firstname: string,
+    lastname: string,
+    age: number,
+    isAdmin: boolean,
+    isActive: boolean,
+    getFullName: () => string
+}
 
+let user3: usersMethod = {
+
+    firstname: "Vishal",
+    lastname: "Gupta",
+    age: 27,
+    isActive: true,
+    isAdmin: true,
+    getFullName() {
+        return this.firstname + " " + this.lastname
+    },
+}
+
+// console.log(user3.getFullName());
+
+
+/** Using any keyward */
 let anotherUser: any = {
     isAdmin: true,
     role: "software engineer"
 }
+anotherUser.salary = 0.0001; //because of any, all type will be accepted.
 
 /** NOTE -
  *  any type means that the particular variable, particular array or particular object can be any type.
  *  any type will not restrict any kind of type change like from string to number, boolean, null any.
+ */
+
+
+
+
+
+
+/** Union Types */
+let mydata: string | number | boolean = "Hi I am data"; //default - string:
+
+/** NOTE -
+ *  any is also solution for the other types of data re-assign but that's not right way specially if we know possible data types of 'mydata' variable.
+ *  We can use union type define by the pipe | symbol and multiple type we can assign.
+ */
+
+
+
+/** functions */
+function func1(): number {
+    return 100;
+}
+// console.log(func1());
+
+function func2(): string {
+    return "I am string"
+}
+// console.log(func2())
+
+function func3(a, b): number {
+    return a + b;
+}
+// console.log(func3(2, 5))
+// console.log(func3("Vishal", " Gupta")) //no error ?
+
+function func4(a: number, b: number): number {
+    return a + b;
+}
+// console.log(func4(24, 6))
+
+function func5(a: number, b?: number): number {
+    return b ? a + b : a;
+}
+// console.log(func5(24));
+// console.log(func5(24, 6));
+
+/** NOTE -
+ *  If function return type is mentioned as number it will return number or else gives error:
+ *  If the parameter is defined as type the the argument will be acceped only in that particular type.
+ *  If the args has possibility like that may not provide so we can use '?' in example 'func5'.
+ *  if we provide the '?' mark means that, not mandatory args or parameter.
+ */
+
+
+
+
+
+
+/** Classes */
+//Normal class in Js defined:
+class App1 {
+    firstname;
+    lastname;
+    constructor(firstname, lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    getFullName() {
+        return this.firstname + " " + this.lastname
+    }
+}
+// let app1 = new App1("Vishal", "Gupta");
+// let app2 = new App1("Aadity", "Gupta");
+// console.log(app1.getFullName());
+// console.log(app2.getFullName());
+
+
+//class defined in typescript:
+class App2 {
+    firstname: string;
+    lastname: string;
+    constructor(firstname: string, lastname: string) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    getFullName(): string {
+        return this.firstname + " " + this.lastname
+    }
+}
+// let app1 = new App2("John", "Doe");
+// console.log(app1.getFullName());
+
+
+/** NOTE -
+ *  In classes if the var is already identified as string, number etc so keep
+ * In method, if we have return statedment then keep the type according to the return statement like - number string boolean etc.
+ * If in the return statement nothing we have to return the in that case we need to use 'void'
+ */
+
+
+
+
+
+/** Inheritance Concepts: */
+//Typescript:
+class Parent {
+    name: string;
+    setname(name): void {
+        this.name = name;
+    }
+}
+class Child extends Parent {
+    getname(): string {
+        return this.name;
+    }
+}
+
+let child1 = new Child();
+child1.setname("Jack Sparrow");
+console.log(child1.getname());
+
+
+
+
+/** Namespace */
+/// <reference path="utils.ts" />
+namespace UserUtils {
+    export class Users extends Parent implements userType {
+        getName() {
+            return this.name;
+        }
+    }
+}
+let util = new UserUtils.Users();
+util.setname("Harry Potter");
+console.log(util.getName());
+
+
+/** NOTE -
+ *  Namespace is out date fashion we don't need but in case of any chance.
+ * In namespace we always have export the classes.
+ * For the accessing or calling we have to go throw new instance of namespace e.g - new UserUtils.Users();
+ * While using namespace it is also expected that to use as out file. 
  */
