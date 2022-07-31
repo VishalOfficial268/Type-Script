@@ -1,3 +1,4 @@
+"use strict";
 function users(data) {
     return data;
 }

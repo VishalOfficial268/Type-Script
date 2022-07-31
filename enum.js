@@ -1,3 +1,4 @@
+"use strict";
 /** enums usase: */
 var Days1;
 (function (Days1) {
@@ -19,8 +20,8 @@ var Days2;
     Days2["saturday"] = "Saturday";
     Days2["sunday"] = "Sunday";
 })(Days2 || (Days2 = {}));
-var whichDay;
-var capsDay;
+let whichDay;
+let capsDay;
 whichDay = Days1.sunday; //output:6 as like array index.
 capsDay = Days2.sunday; //output:6 as like array index.
 console.log(whichDay);

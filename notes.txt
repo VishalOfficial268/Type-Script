@@ -1,0 +1,10 @@
+Notes for TS:
+****************************** T S   C O N F I G U R A T I O N S *****************************
+[+] cmd - tsc --init -> It will init the ts config file automatic.
+[+] files that we want to compile as ts file to make it in another file as same file with .js ext.
+[+] we should change the config of the file as  "rootDir" to give the desired folder from where all the ts files takes and 
+    give the target folder as "outDir" folder as desired folder.
+    eg - rootDir:./src(folder) -----> outDir:./public (folder)
+[+] for file config as all file will be affected doing such as the above mentioned example. So for preventing such we can 
+    also  make configurations like below.
+    need to add "include": [give_folder_name] e.g- "include":["src"] 
