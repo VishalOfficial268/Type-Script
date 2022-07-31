@@ -1,7 +1,7 @@
 export { }
 
 
-/** Type declrations: with Premitive Data Types */
+/** Type declarations: with Primitive Data Types */
 let numbers1: number = 1312312;
 let decimalNumber: number = 100.4324;
 let myCharctor: string = "Hi I am learning type script";
@@ -21,7 +21,7 @@ let checkNanValue: number = NaN;
 
 
 
-/** Type declrations: with Non-Premitive Data Types */
+/** Type declarations: with Non-Primitive Data Types */
 //working with Array:
 let simpleArray = ['Javascript', 'NoeJs'] //automatic type decided string based on the current types in array:
 let stringArr: string[] = ["Vishal", "Aaditya", "Krishna", "Sunil"];
@@ -90,7 +90,7 @@ let user3: usersMethod = {
 // console.log(user3.getFullName());
 
 
-/** Using any keyward */
+/** Using any keyword */
 let anotherUser: any = {
     isAdmin: true,
     role: "software engineer"
@@ -147,7 +147,7 @@ function func5(a: number, b?: number): number {
 
 /** NOTE -
  *  If function return type is mentioned as number it will return number or else gives error:
- *  If the parameter is defined as type the the argument will be acceped only in that particular type.
+ *  If the parameter is defined as type the the argument will be accepted only in that particular type.
  *  If the args has possibility like that may not provide so we can use '?' in example 'func5'.
  *  if we provide the '?' mark means that, not mandatory args or parameter.
  */
@@ -196,7 +196,7 @@ class App2 {
 
 /** NOTE -
  *  In classes if the var is already identified as string, number etc so keep
- * In method, if we have return statedment then keep the type according to the return statement like - number string boolean etc.
+ * In method, if we have return statement then keep the type according to the return statement like - number string boolean etc.
  * If in the return statement nothing we have to return the in that case we need to use 'void'
  */
 
@@ -250,7 +250,7 @@ console.log(util.getName());
 
 
 
-/** Module-wise Methods importing and exporting featurs or methods*/
+/** Module-wise Methods importing and exporting features or methods*/
 import studentLogin from './Student';
 import teacherLogin from './Teacher';
 let teacher = new teacherLogin();
@@ -259,8 +259,9 @@ console.log(teacher.data, student.data);
 
 
 /** NOTE -
- * Module wise exports gives you the facility of the same class usases to anywhere
+ * Module wise exports gives you the facility of the same class usages to anywhere
  * If we don't use the module the ts file will gives you an error as same name can not be used.
- * For compilling all files as ts file run - tsc *.ts -w
+ * For compiling all files as ts file run - tsc *.ts -w
  */
+
 

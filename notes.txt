@@ -1,4 +1,37 @@
 Notes for TS:
+[+] .ts file will never run as like .js file so basically we always have to run .js file after compiling.
+[+] In typescript there are 3 core data types - number, string and boolean.
+[+] number data types will consider both integer and float value.
+[+] if we have an error in .ts file and hit the cmd to compile then it will compile as changes in the .js file 
+    but also gives the error in the .js file.
+[+] infrence guess the type automatically based on the previous data or variables assigned.
+[+] If a veriable is assiged as undefined and then the type will be "any"
+[+] If we need a varible as like constant value then we can use like let data:5 = 5; (here :5 is constant)
+     other than 5 no value will be assigned.
+[+] In the const if we have assigned a certain value then the const value will the assigned value as like e.g 5
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+[+]
+
 ****************************** T S   C O N F I G U R A T I O N S *****************************
 [+] cmd - tsc --init -> It will init the ts config file automatic.
 [+] files that we want to compile as ts file to make it in another file as same file with .js ext.

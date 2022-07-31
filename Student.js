@@ -1,8 +1,9 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Login {
-    constructor() {
+exports.__esModule = true;
+var Login = /** @class */ (function () {
+    function Login() {
         this.data = "login done as student.";
     }
-}
-exports.default = Login;
+    return Login;
+}());
+exports["default"] = Login;
