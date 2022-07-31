@@ -9,35 +9,40 @@ Notes for TS:
 [+] If we need a varible as like constant value then we can use like let data:5 = 5; (here :5 is constant)
      other than 5 no value will be assigned.
 [+] In the const if we have assigned a certain value then the const value will the assigned value as like e.g 5
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
-[+]
+[+] Never type use wehen we are sure nothing will come as return but the error will be occured.
+[+] Watch mode is used for saving the time for ts file compilation as in js file so just like nodemon it also 
+    behaves.
+
+
+
 
 ****************************** T S   C O N F I G U R A T I O N S *****************************
 [+] cmd - tsc --init -> It will init the ts config file automatic.
+
 [+] files that we want to compile as ts file to make it in another file as same file with .js ext.
-[+] we should change the config of the file as  "rootDir" to give the desired folder from where all the ts files takes and 
-    give the target folder as "outDir" folder as desired folder.
+
+[+] we should change the config of the file as  "rootDir" to give the desired folder from where all the ts
+    files takes and give the target folder as "outDir" folder as desired folder.
     eg - rootDir:./src(folder) -----> outDir:./public (folder)
-[+] for file config as all file will be affected doing such as the above mentioned example. So for preventing such we can 
-    also  make configurations like below.
-    need to add "include": [give_folder_name] e.g- "include":["src"] 
+
+[+] for file config as all file will be affected doing such as the above mentioned example. So for preventing
+     such we can also  make configurations like below.
+    need to add "include": [give_folder_name] e.g- "include":["src"]
+
+[+] For compilling multiple file by a single cmd - tsc --watch or -w
+
+[+] We can also apply target config as ES3, ES5, ES6 or above as per requirements.
+
+[+] noUnusedLocals - used for any kind of variables which are not being used in code, it will give the hint.
+
+[+] noImplicitReturns - used for no return in any block and unnecessary handled as block will give you warning 
+    hint eg. we have if else block but else block is nothing to return then it will give warning.
+
+[+] noUnusedParameters - used for un-used parameters in the functio or anywhere, gives warning.
+
+[+] noFallthroughCasesInSwitch - used for when we don't give the break statement in code for example we have
+    switch case but we did not use the break statemet then it will give the warning.
+
+[+] ES6 gives almost same type class in typescript after compilations but in ES5 it gives old model code.
+
+[+] ES6 has the ability of OOP concept in ts file compiling (if we compile the ts file)
