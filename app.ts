@@ -1,4 +1,5 @@
-// export {}
+export { }
+
 
 /** Type declrations: with Premitive Data Types */
 let numbers1: number = 1312312;
@@ -120,7 +121,7 @@ let mydata: string | number | boolean = "Hi I am data"; //default - string:
 function func1(): number {
     return 100;
 }
-// console.log(func1());
+console.log(func1());
 
 function func2(): string {
     return "I am string"
@@ -227,13 +228,13 @@ console.log(child1.getname());
 /** Namespace */
 /// <reference path="utils.ts" />
 namespace UserUtils {
-    export class Users extends Parent implements userType {
+    export class User extends Parent {
         getName() {
             return this.name;
         }
     }
 }
-let util = new UserUtils.Users();
+let util = new UserUtils.User();
 util.setname("Harry Potter");
 console.log(util.getName());
 
@@ -243,4 +244,22 @@ console.log(util.getName());
  * In namespace we always have export the classes.
  * For the accessing or calling we have to go throw new instance of namespace e.g - new UserUtils.Users();
  * While using namespace it is also expected that to use as out file. 
+ */
+
+
+
+
+
+/** Module-wise Methods importing and exporting featurs or methods*/
+import studentLogin from './Student';
+import teacherLogin from './Teacher';
+let teacher = new teacherLogin();
+let student = new studentLogin();
+console.log(teacher.data, student.data);
+
+
+/** NOTE -
+ * Module wise exports gives you the facility of the same class usases to anywhere
+ * If we don't use the module the ts file will gives you an error as same name can not be used.
+ * For compilling all files as ts file run - tsc *.ts -w
  */

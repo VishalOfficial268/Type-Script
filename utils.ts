@@ -1,11 +1,11 @@
-namespace UserUtils {
+namespace UserUtilss {
     export class Parent {
         name;
         setname(fullname) {
             return this.name = fullname;
         }
     }
-    export interface userType {
+    export interface userMethods {
         getName();
     }
 }

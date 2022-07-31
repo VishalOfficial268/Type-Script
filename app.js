@@ -1,4 +1,4 @@
-// export {}
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+exports.__esModule = true;
 /** Type declrations: with Premitive Data Types */
 var numbers1 = 1312312;
 var decimalNumber = 100.4324;
@@ -78,7 +79,7 @@ var mydata = "Hi I am data"; //default - string:
 function func1() {
     return 100;
 }
-// console.log(func1());
+console.log(func1());
 function func2() {
     return "I am string";
 }
@@ -164,19 +165,19 @@ console.log(child1.getname());
 /// <reference path="utils.ts" />
 var UserUtils;
 (function (UserUtils) {
-    var Users = /** @class */ (function (_super) {
-        __extends(Users, _super);
-        function Users() {
+    var User = /** @class */ (function (_super) {
+        __extends(User, _super);
+        function User() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        Users.prototype.getName = function () {
+        User.prototype.getName = function () {
             return this.name;
         };
-        return Users;
+        return User;
     }(Parent));
-    UserUtils.Users = Users;
+    UserUtils.User = User;
 })(UserUtils || (UserUtils = {}));
-var util = new UserUtils.Users();
+var util = new UserUtils.User();
 util.setname("Harry Potter");
 console.log(util.getName());
 /** NOTE -
@@ -184,4 +185,15 @@ console.log(util.getName());
  * In namespace we always have export the classes.
  * For the accessing or calling we have to go throw new instance of namespace e.g - new UserUtils.Users();
  * While using namespace it is also expected that to use as out file.
- */ 
+ */
+/** Module-wise Methods importing and exporting featurs or methods*/
+var Student_1 = require("./Student");
+var Teacher_1 = require("./Teacher");
+var teacher = new Teacher_1["default"]();
+var student = new Student_1["default"]();
+console.log(teacher.data, student.data);
+/** NOTE -
+ * Module wise exports gives you the facility of the same class usases to anywhere
+ * If we don't use the module the ts file will gives you an error as same name can not be used.
+ * For compilling all files as ts file run - tsc *.ts -w
+ */
