@@ -263,3 +263,4 @@ console.log(teacher.data, student.data);
  * If we don't use the module the ts file will gives you an error as same name can not be used.
  * For compilling all files as ts file run - tsc *.ts -w
  */
+
